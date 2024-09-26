@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HeaderComponent } from "./header/header.component";
+import { ServerStatusComponent } from "./dashboard/server-status/server-status.component";
+import { TrafficComponent } from "./dashboard/traffic/traffic.component";
+import { SupportTicketsComponent } from "./dashboard/support-tickets/support-tickets.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
+  imports: [HeaderComponent, ServerStatusComponent, TrafficComponent, SupportTicketsComponent],
 })
 export class AppComponent {
+
+  constructor() {
+
+  }
   dummyTrafficData = [
     {
       id: 'd1',
@@ -36,6 +45,13 @@ export class AppComponent {
       value: 589,
     },
   ];
-  maxTraffic = Math.max(...this.dummyTrafficData.map((data) => data.value));
+
   currentStatus = 'online';
+  // maxTrafficData = Math.max(...this.dummyTrafficData.map((data) =>   data.value));
+  maxTraffic = Math.max(...this.dummyTrafficData.map((data) =>   data.value));
+
+
+
+
+
 }
