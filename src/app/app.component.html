@@ -1,14 +1,14 @@
 <app-header />
 <main>
   <div id="dashboard">
-    <div class="dashboard-item">
-      <server-status/>
-    </div>
-    <div class="dashboard-item">
-      <traffic/>
-    </div>
-    <div class="dashboard-item">
+    <dashboard-item [image]="{src : 'status.png', alt: 'status alt'}" title="server status">
+      <server-status />
+    </dashboard-item>
+    <dashboard-item [image]="{src : 'globe.png', alt: 'status alt'}" title="traffic">
+      <traffic />
+    </dashboard-item>
+    <dashboard-item [image]="{src : 'list.png', alt: 'status alt'}" title="server status">
       <support-tickets />
-    </div>
+    </dashboard-item>
   </div>
 </main>
