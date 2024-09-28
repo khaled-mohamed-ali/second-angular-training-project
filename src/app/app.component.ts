@@ -4,12 +4,13 @@ import { ServerStatusComponent } from "./dashboard/server-status/server-status.c
 import { TrafficComponent } from "./dashboard/traffic/traffic.component";
 import { SupportTicketsComponent } from "./dashboard/support-tickets/support-tickets.component";
 import { DashboardItemComponent } from "./dashboard/dashboard-item/dashboard-item.component";
+import { ButtonComponent } from './shared/button/button.component'
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  imports: [HeaderComponent, ServerStatusComponent, TrafficComponent, SupportTicketsComponent, DashboardItemComponent],
+  imports: [HeaderComponent, ServerStatusComponent, TrafficComponent, SupportTicketsComponent, DashboardItemComponent, ButtonComponent],
 })
 export class AppComponent {
 

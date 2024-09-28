@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-button',
+  selector: 'button[appButton]',
   standalone: true,
   imports: [],
   templateUrl: './button.component.html',
   styleUrl: './button.component.css'
 })
 export class ButtonComponent {
+@Input() buttonTitle: string = '';
+@Input() buttonIcon: string = '';  
 
 }
