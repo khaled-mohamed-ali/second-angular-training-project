@@ -10,8 +10,8 @@
   font-size: 1.15rem;
 }
 
-:host p:first-of-type {
-  color: #6a3cb0;
+.status-online p:first-of-type {
+  color: #6a3cb0 ;
 }
 
 .status-offline p:first-of-type {

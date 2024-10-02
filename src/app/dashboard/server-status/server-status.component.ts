@@ -9,6 +9,12 @@ import { Component, Input } from '@angular/core';
 })
 export class ServerStatusComponent {
 
-  currentStatus:string = 'online';
+  currentStatus: string = 'online';
 
+  constructor() {
+
+
+
+
+}
 }
