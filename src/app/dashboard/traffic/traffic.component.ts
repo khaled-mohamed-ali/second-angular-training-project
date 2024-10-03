@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostBinding, Input } from '@angular/core';
 import { Traffic } from './traffic';
 import { FormsModule } from '@angular/forms';
 
@@ -12,7 +12,9 @@ import { FormsModule } from '@angular/forms';
 export class TrafficComponent {
 
   constructor() {
+    
   }
+
   
   dummyTrafficData = [
     {
