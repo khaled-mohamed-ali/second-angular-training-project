@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { afterNextRender, afterRender, Component, ElementRef, ViewChild, viewChild } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { ButtonComponent } from "../../../shared/button/button.component";
 import { ControlComponent } from "../../../shared/control/control.component";
@@ -11,7 +11,7 @@ import { ControlComponent } from "../../../shared/control/control.component";
   styleUrl: './new-ticket.component.css'
 })
 export class NewTicketComponent {
-  
+
 
 onSubmit(HTMLLabelElement: ButtonComponent, textArea: HTMLTextAreaElement ,form: HTMLFormElement) {
   
