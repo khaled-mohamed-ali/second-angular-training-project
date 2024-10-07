@@ -1,7 +1,8 @@
-<div>
-  <ul>
+<div> 
+  <ul class="list-group">
     @for (ticket of tickets; track ticket.id) {
-    <li>
+    <li class="list-group-item">
+      {{ticket.request}}
     </li>
     }
     @empty {
@@ -9,7 +10,6 @@
     }
   </ul>
 </div>
-
 
 <div id="new-ticket">
   <app-new-ticket (add)="onAdd($event)" />

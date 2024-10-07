@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { NewTicketComponent } from "../tickets/new-ticket/new-ticket.component";
-import { Ticket } from '../tickets/ticket/ticket';
+import { NewTicketComponent } from "./new-ticket/new-ticket.component";
+import { Ticket } from './ticket';
 
 @Component({
-  selector: 'support-tickets',
+  selector: 'tickets',
   standalone: true,
   imports: [NewTicketComponent],
-  templateUrl: './support-tickets.component.html',
-  styleUrl: './support-tickets.component.css'
+  templateUrl: './tickets.component.html',
+  styleUrl: './tickets.component.css'
 })
-export class SupportTicketsComponent {
+export class TicketsComponent {
   tickets: Ticket[] = []
 
   onAdd(ticketData: {title: string; text: string}) {
