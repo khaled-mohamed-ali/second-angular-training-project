@@ -1,16 +1,18 @@
-<div> 
-  <ul class="list-group">
-    @for (ticket of tickets; track ticket.id) {
-    <li class="list-group-item">
-      {{ticket.request}}
-    </li>
-    }
-    @empty {
+<div class="d-flex space-between">
+  <div class="col-5">
+    <ul class="list-group">
+      @for (ticket of tickets; track ticket.id) {
+      <li class="list-group-item">
+        {{ticket.request}}
+      </li>
+      }
+      @empty {
       <p class="text-primary">no tickets available</p>
-    }
-  </ul>
-</div>
+      }
+    </ul>
+  </div>
 
-<div id="new-ticket">
-  <app-new-ticket (add)="onAdd($event)" />
+  <div id="new-ticket" class="col-6">
+    <app-new-ticket (add)="onAdd($event)" />
+  </div>
 </div>
