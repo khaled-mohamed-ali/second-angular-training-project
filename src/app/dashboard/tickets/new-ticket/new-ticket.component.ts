@@ -12,11 +12,12 @@ import { ControlComponent } from "../../../shared/control/control.component";
 })
 export class NewTicketComponent {
   add = output<{title: string ; text: string}>()
-
+  @ViewChild('form') form!: HTMLFormElement;
 
 
 onSubmit(title:string, textArea: string, form: HTMLFormElement) {
-  this.add.emit({title:title,text: textArea})
+  this.add.emit({title:title,text: textArea});
+  form.reset()
 }
  
 }
