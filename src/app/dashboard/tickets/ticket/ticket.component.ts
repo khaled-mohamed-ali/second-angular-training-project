@@ -13,7 +13,8 @@ export class TicketComponent {
   dataVisable = signal(false)
 
   onToggleData() {
-    this.dataVisable.set(!this.dataVisable)
+    this.dataVisable.update(wasVisble => !wasVisble)
   }
+
 
 }
